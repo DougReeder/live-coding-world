@@ -1,0 +1,23 @@
+{
+  "name": "live-coding-world",
+  "version": "0.6.0",
+  "description": "A bare-bones multiuser WebXR scene for live coding",
+  "keywords": [
+    "WebXR",
+    "A-Frame",
+    "Croquet"
+  ],
+  "main": "index.html",
+  "scripts": {
+    "dev": "budo --dir . --cors --live --verbose --open",
+    "start": "http-server -p 4443 -d --no-dotfiles --cors -c-1 --tls --key ~/sysadmin/moa.local+5-key.pem --cert ~/sysadmin/moa.local+5.pem -o",
+    "surge": "surge . https://live-coding.surge.sh",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "budo": "^11.8.4"
+  },
+  "author": "Doug Reeder",
+  "license": "GPL-3.0-or-later"
+}
